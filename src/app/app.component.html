@@ -6,16 +6,18 @@
       <button mat-list-item [routerLink]="['about']"> About </button>
     </mat-action-list>
   </mat-sidenav>
-  <!-- Outside the sidenav, so where the toggle button goes -->
+  <!-- Outside the sidenav -->
   <mat-sidenav-content>
+    <!-- Title Bar -->
     <mat-toolbar color="primary">
-      <button mat-icon-button>
-        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
       </button>
       <span class="example-spacer"></span>
       <span>Meg Pog</span>
-      <span><img class="meg-pog-image" src="../assets/imgs/megpog_2.png" /></span>
+      <span><img class="meg-pog-image" src="../assets/imgs/megpog_2.png" [routerLink]="['']" /></span>
     </mat-toolbar>
+    <!-- All other content -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
