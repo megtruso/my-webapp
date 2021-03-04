@@ -1,0 +1,10 @@
+@import '../../scss/mixins.scss';
+
+:host{
+  .material-icons {
+    transition: transform .5s;
+    &.animate {
+      transform: rotate(360deg);
+    }
+  }
+}
