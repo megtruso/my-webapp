@@ -1,9 +1,15 @@
 <mat-sidenav-container class="sidenav-container">
   <!-- Inside the sidenav bar -->
-  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+  <mat-sidenav class="sidenav" #sidenav mode="side" [(opened)]="opened">
     <mat-action-list>
-      <button mat-list-item [routerLink]="['twitch']"> Twitch </button>
-      <button mat-list-item [routerLink]="['about']"> About </button>
+      <button mat-list-item [routerLink]="['twitch']">
+        <mat-icon matListIcon class="list-icon-spacer">video_call</mat-icon>
+        Twitch
+      </button>
+      <button mat-list-item [routerLink]="['about']">
+        <mat-icon matListIcon class="list-icon-spacer">person</mat-icon>
+        About
+      </button>
     </mat-action-list>
   </mat-sidenav>
   <!-- Outside the sidenav -->
@@ -13,7 +19,7 @@
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span class="example-spacer"></span>
+      <span class="spacer"></span>
       <span>Meg Pog</span>
       <span><img class="meg-pog-image" src="../assets/imgs/megpog_2.png" [routerLink]="['']" /></span>
     </mat-toolbar>
